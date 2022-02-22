@@ -1,7 +1,7 @@
 package com.uco.aplicacionWeb.AplicacionINGTres.dominio.servicio.usuario;
 
 import com.uco.aplicacionWeb.AplicacionINGTres.dominio.modelo.Usuario;
-import com.uco.aplicacionWeb.AplicacionINGTres.dominio.puerto.RepositorioUsuario;
+import com.uco.aplicacionWeb.AplicacionINGTres.dominio.puerto.usuario.RepositorioUsuario;
 import org.springframework.stereotype.Service;
 
 @Service

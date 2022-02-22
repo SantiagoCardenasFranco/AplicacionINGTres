@@ -1,27 +1,29 @@
 package com.uco.aplicacionWeb.AplicacionINGTres.dominio.modelo;
 
+import com.uco.aplicacionWeb.AplicacionINGTres.dominio.modelo.validaciones.Validaciones;
+
 public class Usuario {
 
-    private final int identificacin;
+    //private final int identificacin;
     private final String nombre;
     private final String apellido;
     private final String correo;
     private final String password;
 
-    public static Usuario of(int identificacin, String nombre, String apellido, String correo,
+    public static Usuario of(String nombre, String apellido, String correo,
                              String password) {
 
-        validarDato(identificacin, "La identificación no puede estar vacia");
+        //validarDato(identificacin, "La identificación no puede estar vacia");
         validarObligatorio(nombre, "El nombre no puede ser vacio");
         validarObligatorio(apellido, "El apellido no puede ser vacio");
         validarObligatorio(correo, "El correo no puede estar vacio");
         validarObligatorio(password, "La contraseña no puede estar vacia");
 
-        return new Usuario(identificacin, nombre, apellido, correo, password);
+        return new Usuario(nombre, apellido, correo, password);
     }
 
-    private Usuario(int identificacin, String nombre, String apellido, String correo, String password) {
-        this.identificacin = identificacin;
+    private Usuario(String nombre, String apellido, String correo, String password) {
+        //this.identificacin = identificacin;
         this.nombre = nombre;
         this.apellido = apellido;
         this.correo = correo;
@@ -49,9 +51,9 @@ public class Usuario {
         return apellido;
     }
 
-    public int getIdentificacin() {
+    /*public int getIdentificacin() {
         return identificacin;
-    }
+    }*/
 
     public String getCorreo() {
         return correo;

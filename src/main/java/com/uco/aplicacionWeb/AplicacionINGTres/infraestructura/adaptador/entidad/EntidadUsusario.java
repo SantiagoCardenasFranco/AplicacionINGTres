@@ -1,23 +1,32 @@
-package com.uco.aplicacionWeb.AplicacionINGTres.aplicacion.dto;
+package com.uco.aplicacionWeb.AplicacionINGTres.infraestructura.adaptador.entidad;
 
-import com.uco.aplicacionWeb.AplicacionINGTres.dominio.modelo.Usuario;
+import javax.persistence.*;
 
-public class DtoUsuario {
+@Entity
+@Table(name= "usuario")
+public class EntidadUsusario {
 
-    //private int identificacin;
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private Long identificacion;
+
     private String nombre;
     private String apellido;
     private String correo;
     private String password;
 
-    public DtoUsuario(){}
+    public EntidadUsusario() {
+    }
 
-    public DtoUsuario(String nombre, String apellido, String correo, String password) {
-        //this.identificacin = identificacin;
+    public EntidadUsusario(String nombre, String apellido, String correo, String password) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.correo = correo;
         this.password = password;
+    }
+
+    public Long getIdentificacion() {
+        return identificacion;
     }
 
     public String getNombre() {
@@ -27,10 +36,6 @@ public class DtoUsuario {
     public String getApellido() {
         return apellido;
     }
-
-   /* public int getIdentificacin() {
-        return identificacin;
-    }*/
 
     public String getCorreo() {
         return correo;
