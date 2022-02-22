@@ -40,6 +40,7 @@ public class RepositorioUsuarioPostgresql implements RepositorioUsuario {
         return this.repositoriaUsuarioJpa.save(entidadUsuario).getIdentificacion();
     }
 
+
     @Override
     public boolean existe(Usuario usuario) {
         return this.repositoriaUsuarioJpa.buscar(usuario.getNombre(), usuario.getApellido(), usuario.getCorreo(),
